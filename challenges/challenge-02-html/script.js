@@ -24,10 +24,6 @@ let clearForm = () => {
 }
 
 let sendMessage = () => {
-    if (messageInput.length > 3 && subjectInput.length > 3 && nameInput.length > 3 && emailInput.length > 3) {
-        alert("Mensagem enviada com sucesso");
-    } else {
-        alert("Campos inválidos. Tente novamente");
-        return;
-    }
+    let validForm = messageInput.length > 3 && subjectInput.length > 3 && nameInput.length > 3 && emailInput.length > 3;
+    validForm ? alert("Mensagem enviada com sucesso") : alert("Campos inválidos. Tente novamente");
 }
