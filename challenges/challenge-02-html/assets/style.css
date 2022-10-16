@@ -55,7 +55,10 @@ h3 {
 
 #services, #about {
     width: 80%;
-    margin: 10px 0;
+}
+
+#services, #about, #operation, #contact {
+    margin: 50px 0;
 }
 
 #operation table, #operation table th, #operation table td {
