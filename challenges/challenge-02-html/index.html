@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica de Fisioterapia Esportiva</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="content">
+        <header>
+            <div class="container-image-header">
+                <img title="Imagem do cabeçalho da página, onde o fisioterapeuta trata uma lesão em um atleta" src="assets/imagem-header.jpg" alt="Imagem do cabeçalho da página, onde o fisioterapeuta trata uma lesão em um atleta">
+            </div>
+            <ul class="menu">
+                <a href="#services"><li>Serviços</li></a>
+                <a href="#about"><li>Sobre a clínica</li></a>
+                <a href="#operation"><li>Horário de atendimento</li></a>
+                <a href="#contact"><li>Contato</li></a>
+            </ul>
+        </header>
+        <section class="main-section">
+            <h1>Clínica de Fisioterapia Esportiva</h1>
+            <section id="services">
+                <h3>Serviços</h3>
+                <p>Oferecemos serviços <strong>especializados no segmento esportivo</strong>, buscando tratar de forma <i>individualizada</i> cada atleta,
+                de acordo com as particularidades de cada esporte, visando garantir o máximo desempenho esportivo e a total recuperação do atleta.</p>
+            </section>
+            <section id="about">
+                <h3>Sobre a Clínica</h3>
+                <p>Contamos com profissionais altamente capacitados, com experiências em diversos clubes brasileiros, 
+                    como Flamengo, Fluminense, Pinheiros, dentre outros, e também nas seleções brasileiras de base e adulta.
+                </p>
+            </section>
+            <section id="operation">
+                <table summary="Horários de atendimento da clínica esportiva" cellspacing="0" cellpadding="0">
+                    <caption>Horários de atendimento</caption>
+
+                    <tr>
+                        <th>Serviços</th>
+                        <th>Segunda a sexta</th>
+                        <th>Sábados</th>
+                    </tr>
+                    <tr>
+                        <td>Avaliações</td>
+                        <td>08h às 12h</td>
+                        <td>08h às 12h</td>
+                    </tr>
+                    <tr>
+                        <td>Reabilitações</td>
+                        <td>13h às 18h</td>
+                        <td>08h às 12h</td>
+                    </tr>
+                </table>
+            </section>
+            <section id="contact">
+                <h3>Contato</h3>
+                <section class="container-form">
+                    <form method="get" target="_blank">
+                        <div class="container-items-form">
+                            <div>
+                                <label for="name">Nome:</label>
+                                <input  onchange="changeName(event.target.value)" id="name" name="name" type="text" />
+                            </div>
+                            <div>
+                                <label for="email">Email:</label>
+                                <input onchange="changeEmail(event.target.value)" id="email" name="email" type="email" />
+                            </div>
+                            <div>
+                                <label for="subject">Assunto:</label>
+                                <input id="subject"  onchange="changeSubject(event.target.value)" name="subject" type="text" />
+                            </div>
+                        </div>
+                        <div class="container-message-form">
+                            <label for="message">Mensagem:</label>
+                            <textarea  onchange="changeMessage(event.target.value)" id="message" name="message"></textarea>
+                        </div>
+                        <button onclick="sendMessage()" type="submit">Enviar</button>
+                        <button onclick="clearForm()" type="button">Limpar</button>
+                    </form>
+                </section>
+                <p>Telefone/Whatsapp: (11) 99999-9999</p>
+                <p>Endereço: Av. Paulista, 726 - São Paulo</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0523355962964!2d-46.651791985383824!3d-23.566563767668693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59b8c32f0f1d%3A0xa9d29d8b6912ad8e!2sAv.%20Paulista%2C%20726%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-910!5e0!3m2!1spt-PT!2sbr!4v1665895194347!5m2!1spt-PT!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+        </section>
+        <footer>© Todos os direitos reservados.</footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+    margin: 30px 0;
+}
+
+h3 {
+    margin: 10px 0;
+}
+
+.container-image-header {
+    display: flex;
+    justify-content: center;
+}
+
+.container-image-header img {
+    width: 80%;
+    height: 300px;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    margin-right: 120px;
+}
+
+.menu li {
+    cursor: pointer;
+    padding-right: 10px;
+}
+
+.menu li:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.main-section, footer {
+    margin-left: 120px;
+}
+
+#services, #about {
+    width: 80%;
+    margin: 10px 0;
+}
+
+#operation table, #operation table th, #operation table td {
+    border: 0.1px solid black;
+}
+
+#operation table tr th {
+    background-color: gray;
+    color: white;
+    padding: 10px;
+}
+
+#operation table tr td {
+    padding: 10px;
+}
+
+#operation table caption {
+    margin: 10px 0;
+    text-align: left;
+    font-size: 19px;
+    font-weight: bold; 
+}
+
+#contact p {
+    margin: 20px 0;
+}
+
+.container-items-form {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    margin: 20px 0;
+}
+
+.container-message-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.container-message-form label, .container-message-form textarea {
+    margin: 5px 0;
+}
+
+.container-form button {
+    border: 1px solid black;
+    background: none;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.container-form button:hover {
+    font-weight: bold;
+}
+
+footer {
+    margin: 30px 0;
+    text-align: center;
+}
