@@ -4,14 +4,12 @@
 body {
     font-size: 16px;
     font-family: 'Raleway';
+    background: #000000;
 }
 
 .banner {
     background: url("./images/banner.png");
     width: 100%;
-    height: auto;
-    left: 0px;
-    top: 0px;
 }
 
 .banner-content,
@@ -21,6 +19,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .logo img {
@@ -30,23 +29,82 @@ footer {
     top: 1.69rem;
 }
 
+.banner-content {
+    border-bottom: 1px solid #33A8DB;
+}
+
 .banner-content h1 {
+    width: 434px;
+    height: 47px;
     font-weight: 900;
     font-size: 2.5rem;
-    line-height: 47px;
-    background-color: linear-gradient(180deg, #33A8DB 0%, #1472B7 100%);
+    line-height: 47px;    
+    background: linear-gradient(180deg, #33A8DB 0%, #1472B7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
     text-transform: uppercase;
-    margin-top: 1rem;
 }
 
 .banner-content p {
     width: 510px;
     height: 46px;
-    font-weight: 400;
-    font-size: 1.25rem;
+    font-size: 1rem;
     line-height: 23px;
     text-align: center;
     color: #FFFFFF;
+    margin-top: 1rem;
+}
+
+.banner-content button {
+    padding: 13px 38px;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1rem;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.21em;
+    color: #31A8DD;
+    background: none;
+    border: 1.5px solid #31A8DD;
+    margin: 2rem 0 4.5rem;
+}
+
+#course-content {
+    margin: 4rem 0;
+}
+
+#course-content p {
+    width: 792px;
+    height: 38px;
+    font-size: 1rem;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 1rem 0;
+}
+
+.module {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 535px;
+    height: 51px;
+    background: #252525;
+    border: 1px solid #33A8DB;
+    box-shadow: inset -2px 6px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 57px;
+    color: #FFFFFF;
+    margin: 1rem 0;
+}
+
+.module span {
+    font-size: 1rem;
+    line-height: 19px;
+    color: #33A8DB;
 }
 
 #transform-world {
@@ -55,7 +113,9 @@ footer {
     background-size: cover;
     background-position: center;
     height: 363px;
-    width: 100vw;
+    width: 100%;
+    border-top: 1px solid #31A8DD;
+    border-bottom: 1px solid #31A8DD;
 }
 
 #transform-world p {
@@ -97,7 +157,7 @@ footer {
     font-size: 1rem;
     line-height: 19px;
     text-align: center;
-    color: #000;
+    color: #FFFFFF;
 }
 
 footer {
@@ -107,4 +167,15 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-top: 1px solid #31A8DD;
+}
+
+footer p {
+    color: #FFFFFF;
+    margin-top: 0.8rem;
+}
+
+footer a {
+    color: #31A8DD;
+    text-decoration: none;
 }
