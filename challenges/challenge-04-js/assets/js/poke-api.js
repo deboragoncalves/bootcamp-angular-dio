@@ -85,5 +85,12 @@ pokeApi.createPokemonCharacter = pokemonDetail => {
 
     });
 
+    // Retorna um novo array com os nomes
+    const types = pokemonDetail.types.map((typeSlot) => typeSlot.type.name);
+
+    // Retorna o primeiro item do array
+    const [type] = types;
+    pokemonCharacter.type = type;
+    
     return pokemonCharacter;
 }

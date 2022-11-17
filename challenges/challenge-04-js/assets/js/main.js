@@ -24,10 +24,49 @@ let convertPokemonToLi = pokemon => {
     `
 }
 
+let createModalCharacterPokemon = pokemonCharacter => {
+
+    if (pokemonCharacter) {
+        let heightPokemon = parseFloat(pokemonCharacter.height) / 10;
+        let weightPokemon = parseFloat(pokemonCharacter.weight) / 10;
+
+        return `
+        <div class="modal fade" id="modalCharacterPokemon" tabindex="-1" role="dialog" aria-labelledby="modalCharacterPokemon" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body ${pokemonCharacter.type}">
+                        <p class="pokemon-name">${pokemonCharacter.name}</p>
+                        <section class="section-pokemon-image">
+                            <img alt="${pokemonCharacter.name}" src="${pokemonCharacter.photo}">
+                        </section>
+                        <section class="section-character-pokemon">
+                            <p class="pokemon-character">Altura: <span>${heightPokemon.toFixed(1)} m</span></p>
+                            <p class="pokemon-character">Peso: <span>${weightPokemon.toFixed(1)} kg</span></p>
+                            <p class="pokemon-character">Ataque: <span>${pokemonCharacter.attack}</span></p>
+                            <p class="pokemon-character">Ataque especial: <span>${pokemonCharacter.specialAttack}</span></p>
+                            <p class="pokemon-character">Defesa: <span>${pokemonCharacter.defense}</span></p>
+                            <p class="pokemon-character">Defesa especial: <span>${pokemonCharacter.specialDefense}</span></p>
+                            <p class="pokemon-character">Velocidade: <span>${pokemonCharacter.speed}</span></p>    
+                        </section>                    
+                    </div>
+                    <div class="modal-footer ${pokemonCharacter.type}">
+                        <button type="button" class="btn btn-modal-character" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>`;
+    }
+}
+
 let getCharacterPokemon = pokemonName => {
     if (pokemonName) {
         pokeApi.getPokemonDetailByName(pokemonName)
-            .then(characterPokemon => console.log(characterPokemon))
+            .then(characterPokemon => {
+                let modalCharactere = createModalCharacterPokemon(characterPokemon);
+                let sectionModalCaractere = document.querySelector("#sectionCharacterPokemon");
+                sectionModalCaractere.innerHTML = modalCharactere;
+                $("#modalCharacterPokemon").modal("show");
+            })
             .catch(error => console.log(error));
     }
 }

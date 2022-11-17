@@ -1,6 +1,7 @@
 class PokemonCharacter {
     name;
     photo;
+    type;
     weight;
     height;
     attack; 

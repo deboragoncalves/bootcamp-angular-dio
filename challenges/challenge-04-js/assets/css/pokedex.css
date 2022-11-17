@@ -148,6 +148,55 @@
     cursor: pointer;
 }
 
+#modalCharacterPokemon {
+    color: #fff;
+}
+
+.pokemon-name {
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.pokemon-character {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0 0 0;
+    font-weight: 300;
+}
+
+.section-pokemon-image {
+    display: flex;
+    justify-content: center;
+}
+
+.section-pokemon-image img {
+    width: 30%;
+    height: 30%;
+}
+
+.section-character-pokemon {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 1%;
+    color: #000;
+    padding: 10px 0;
+    margin: 10px 0;
+}
+
+.section-character-pokemon p {
+    padding: 0 10px;
+}
+
+.btn-modal-character {
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
 @media screen and (min-width: 380px) {
     .pokemons {
         grid-template-columns: 1fr 1fr;
