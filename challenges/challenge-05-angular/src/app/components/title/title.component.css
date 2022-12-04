@@ -1,0 +1,15 @@
+.title__container {
+    color: white;
+}
+
+.title__container > h1 {
+    margin: 15px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 135px;
+    display: flex;
+    justify-content: center;
+}
+
+.title__container > hr {
+    margin: 20px 0 5px 0;
+}
