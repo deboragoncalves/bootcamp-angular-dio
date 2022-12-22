@@ -1,0 +1,58 @@
+service: project-serverless
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: us-east-1
+  profile: profile_debora_goncalves
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:*
+      Resource: "*"
+
+functions:
+  hello:
+    handler: src/handler.hello
+    events:
+      - httpApi:
+          path: /
+          method: get
+  insertItem:
+    handler: src/insertItem.handler
+    events:
+      - httpApi:
+          path: /item
+          method: post
+  getItems:
+    handler: src/getItems.handler
+    events:
+      - httpApi:
+          path: /items
+          method: get
+  getItem:
+    handler: src/getItem.handler
+    events:
+      - httpApi:
+          path: /items/{id}
+          method: get
+  updateItem:
+    handler: src/updateItem.handler
+    events:
+      - httpApi:
+          path: /items/{id}
+          method: put
+
+resources:
+  - Resources:
+      ItemTable:
+        Type: 'AWS::DynamoDB::Table'
+        Properties:
+          AttributeDefinitions:
+            - AttributeName: id
+              AttributeType: S
+          KeySchema:
+            - AttributeName: id
+              KeyType: HASH
+          BillingMode: PAY_PER_REQUEST
