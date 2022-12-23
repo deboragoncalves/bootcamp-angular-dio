@@ -1,8 +1,15 @@
 .navbar__container > ul {
     display: flex;
+    padding: 20px 0;
 }
 
 .navbar__container > ul > li {
     margin-right: 20px; 
     list-style-type: none;
+    font-size: 20px;
+}
+
+.navbar__container > ul > li > a:hover {
+    text-decoration: underline;
+    font-weight: 700;
 }

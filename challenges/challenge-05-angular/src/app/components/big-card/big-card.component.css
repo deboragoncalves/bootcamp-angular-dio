@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
 .big__container {
     width: 400px;
     height: 500px;
@@ -11,11 +13,14 @@
 .big__photo > img {
     width: 100%;
     min-width: 400px;
+    min-height: 250px;
+    border-radius: 2px;
 }
 
 .big__title > a > h1 {
-    font-size: 20px;
+    font-size: 30px;
     margin-top: 15px;
+    font-family: 'Shadows Into Light', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .big__description {
@@ -23,5 +28,5 @@
 }
 
 .big__description > a > p {
-    color: gray;
+    color: black;
 }

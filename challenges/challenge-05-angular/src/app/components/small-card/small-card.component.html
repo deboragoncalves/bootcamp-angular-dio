@@ -3,10 +3,17 @@
         <div class="small__photo">
             <img src="{{ cardPhoto }}" alt="">
         </div>
-        <div class="small__title">
-            <a [routerLink]="['content', id]">
-                <h1>{{ cardTitle }}</h1>
-            </a>
+        <div class="small__container__text">
+            <div class="small__title">
+                <a [routerLink]="['content', id]">
+                    <h1>{{ cardTitle }}</h1>
+                </a>
+            </div>
+            <div class="small__description">
+                <a [routerLink]="['content', id]">
+                    <p>{{ cardDescription }}</p>
+                </a>
+            </div>
         </div>
     </div>
     <div class="small__separator">
