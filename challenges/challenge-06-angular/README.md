@@ -1,7 +1,10 @@
-# Desafio 06: Clone BuzzFeed
+# Challenge 06: Clone BuzzFeed
 
 This project was developed during the DIO's Bootcamp classes, using Angular version 15.0.2, to practice all the concepts learned on Angular: data binding and two way data binding, components, directives, HTML/CSS and Typescript.
 
+In addiction to what I learned during the classes, I made some improvements:
+✅ Create subcomponents for Header and Results;
+✅ Create two new interfaces for Question and Option, using this classes in quiz.js;
 
 ## Development server
 
