@@ -5,7 +5,7 @@ This project was developed during the DIO's Bootcamp classes, using Angular vers
 In addiction to what I developed in the class, I added some new funtionalities to the project:
 
 ✅ The main subject of blog is swimming (I really love this sport);
-✅ Use global variables were created in environment.ts and were interpolated in TS files;
+✅ Global variables were created in environment.ts and were interpolated in TS files;
 ✅ Responsive layout;
 
 ## Development server
