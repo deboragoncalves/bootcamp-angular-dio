@@ -1,0 +1,10 @@
+@media screen and (max-width: 800px) {
+    .small__container {
+        width: 90vw;
+        padding: 0 10px;
+    }
+
+    .small__container__content {
+        flex-direction: column;
+    }
+}
