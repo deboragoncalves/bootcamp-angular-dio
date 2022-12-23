@@ -9,7 +9,7 @@ let dataQuiz = require('../../../assets/data/dataQuiz.json');
   styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent implements OnInit {
-  title: string = "";
+  titleHeader: string = "";
 
   questions: any; // array de objetos
   questionSelected: any; // questão/objeto selecionada, com as propriedades id, question..
@@ -29,7 +29,7 @@ export class QuizComponent implements OnInit {
   }
 
   setInitialQuizValues = () => {
-    this.title = dataQuiz.title;
+    this.titleHeader = dataQuiz.titleHeader;
     this.finished = false;
 
     this.questions = dataQuiz.questions;

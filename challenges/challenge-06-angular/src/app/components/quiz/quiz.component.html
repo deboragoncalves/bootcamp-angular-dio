@@ -1,8 +1,5 @@
 <div class="quiz__container">
-    <div class="quiz__logo">
-        <img src="assets/images/logo.png" alt="Logo BuzzFeed">
-        <h3>{{ title }}</h3>
-    </div>
+    <app-header title="{{ titleHeader }}"></app-header>
     <div *ngIf="!finished" class="quiz__questions">
         <h3>{{ questionSelected.question }}</h3>
     </div>
@@ -11,8 +8,5 @@
             {{ option.name }}
         </button>
     </div>
-    <div *ngIf="finished" class="quiz__results">
-        <h1>Resultado:</h1>
-        <p>{{ answerSelected }}</p>
-    </div>
+    <app-result answerSelected="{{ answerSelected }}" [finished]="finished"></app-result>
 </div>
