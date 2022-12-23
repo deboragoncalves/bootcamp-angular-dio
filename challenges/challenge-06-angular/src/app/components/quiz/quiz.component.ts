@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Option } from './option';
+import { Question } from './question';
 
 // Usar require e não import para importar JSON
 let dataQuiz = require('../../../assets/data/dataQuiz.json');
@@ -11,8 +13,20 @@ let dataQuiz = require('../../../assets/data/dataQuiz.json');
 export class QuizComponent implements OnInit {
   titleHeader: string = "";
 
-  questions: any; // array de objetos
-  questionSelected: any; // questão/objeto selecionada, com as propriedades id, question..
+  question: Question = {
+    id: 0,
+    name: '',
+    options: []
+  };
+
+  questions: Question[] = []; // array de objetos
+
+  // questão/objeto selecionada, com as propriedades id, question..
+  questionSelected: Question = {
+    id: 0,
+    name: '',
+    options: []
+  };
 
   answers: string[] = [];
   answerSelected: string = ""; // resposta da questão atual
@@ -32,11 +46,24 @@ export class QuizComponent implements OnInit {
     this.titleHeader = dataQuiz.titleHeader;
     this.finished = false;
 
-    this.questions = dataQuiz.questions;
+    this.setQuestions(dataQuiz);
     this.questionIndex = 0;
     this.questionSelected = this.questions[this.questionIndex];
 
     this.lengthQuestionsArray = this.questions.length;
+  }
+
+  setQuestions = (dataQuiz: any) => {
+    if (dataQuiz) {
+      dataQuiz.questions.forEach((question: any) => {
+        this.question = {
+            id: question.id,
+            name: question.question,
+            options: question.options
+        }
+        this.questions.push(this.question);
+      });
+    }
   }
 
   chosePlayer = (choseAnswer: string) => {
@@ -55,9 +82,6 @@ export class QuizComponent implements OnInit {
       this.finished = true;
       // Verificar resultado
       let finalAnswer: string = await this.checkResult(this.answers);
-      console.log("Respostas: ");
-      console.log(this.answers);
-      console.log("Final: " + finalAnswer);
       // Forçar a variável a ser do mesmo tipo (string) de uma das chaves do objeto results (A, B)
       this.answerSelected = dataQuiz.results[finalAnswer as keyof typeof dataQuiz.results];
     }

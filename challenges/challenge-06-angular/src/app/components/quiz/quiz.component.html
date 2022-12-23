@@ -1,7 +1,7 @@
 <div class="quiz__container">
     <app-header title="{{ titleHeader }}"></app-header>
     <div *ngIf="!finished" class="quiz__questions">
-        <h3>{{ questionSelected.question }}</h3>
+        <h3>{{ questionSelected.name }}</h3>
     </div>
     <div *ngIf="!finished" class="quiz__options">
         <button (click)="chosePlayer(option.alias)" *ngFor="let option of questionSelected.options" class="btn-option">
