@@ -1,6 +1,12 @@
-# Desafio 05: Blog
+# Challenge 05: Blog
 
 This project was developed during the DIO's Bootcamp classes, using Angular version 15.0.2, to practice all the concepts learned on Angular: data binding and two way data binding, routes, components, HTML/CSS, and also Typescript.
+
+In addiction to what I developed in the class, I added some new funtionalities to the project:
+
+✅ The main subject of blog is swimming (I really love this sport);
+✅ Use global variables were created in environment.ts and were interpolated in TS files;
+✅ Responsive layout;
 
 ## Development server
 
